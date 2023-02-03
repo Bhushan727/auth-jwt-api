@@ -7,6 +7,10 @@ app.use(express.json());
 const secretKey = "secret";
 const users = [];
 
+app.get('/',(req,res) => {
+    res.send("Welcome to home Route");
+})
+
 // Create a new user
 app.post("/api/users", (req, res) => {
   const user = req.body;
