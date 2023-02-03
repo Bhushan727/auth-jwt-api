@@ -58,7 +58,7 @@ app.post("/api/login", (req, res) => {
   }
 });
 
-const port = process.evv.PORT || 5000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server started on port 5000`);
 });
