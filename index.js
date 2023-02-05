@@ -3,13 +3,14 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors")
 
 const app = express();
+app.use(cors());
 app.use(express.json());
-app.use(cors);
 
 const secretKey = "secret";
 const users = [];
 
 app.get('/',(req,res) => {
+    console.log("home route");
     res.send("Welcome to home Route");
 })
 
